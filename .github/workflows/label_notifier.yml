@@ -1,0 +1,21 @@
+on:
+  issues:
+    types: [opened]
+jobs:
+  check-resolution-label:
+    runs-on: ubuntu-latest
+    if:
+      ${{ contains(github.event.issue.labels.*.name, 'Type/Bug') && !(
+      contains(github.event.issue.labels.*.name, 'Affected/APIM-2.6.0') ||
+      contains(github.event.issue.labels.*.name, 'Affected/APIM-3.0.0') ||
+      contains(github.event.issue.labels.*.name, 'Affected/APIM-3.1.0') ||
+      contains(github.event.issue.labels.*.name, 'Affected/APIM-3.2.0') ||
+      contains(github.event.issue.labels.*.name, 'Affected/APIM-4.0.0') ||
+      contains(github.event.issue.labels.*.name, 'Affected/APIM-4.1.0')
+      )}}
+    steps:
+      - run: echo Label are not properly set
+      - run: gh issue comment $ISSUE --body "This issue is **NOT** opened with a proper **Affected/** label. Make sure to add proper affected component label when creating issues. Please add or leave a comment with the proper reason label now."
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ISSUE: ${{ github.event.issue.html_url }}
