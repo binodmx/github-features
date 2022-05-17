@@ -1,6 +1,5 @@
 name: "❌ Report a Bug"
 description: Create an issue if something does not work as expected.
-title: "abc"
 labels: ["Priority/Normal", "Type/Bug"]
 body:
   - type: markdown
