@@ -7,7 +7,7 @@ jobs:
     permissions:
       issues: write
     if:
-      ${{contains(github.event.issue.labels.*.name, 'Type/Bug') && !(
+      ${{!(
       contains(github.event.issue.labels.*.name, 'Resolution/Cannot Reproduce') ||
       contains(github.event.issue.labels.*.name, 'Resolution/Duplicate') ||
       contains(github.event.issue.labels.*.name, 'Resolution/Fixed') ||
