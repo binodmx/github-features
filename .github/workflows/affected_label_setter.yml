@@ -7,7 +7,7 @@ jobs:
     permissions:
       issues: write
     if:
-      ${{!(contains(github.event.issue.body, 'Affected Component/Version'))}}
+      ${{contains(github.event.issue.body, 'Affected Component/Version')}}
     steps:
       - run: echo Affected label is not set
       - run: gh issue comment $ISSUE --body "This issue has Affected/{Component}/{Version} label"
