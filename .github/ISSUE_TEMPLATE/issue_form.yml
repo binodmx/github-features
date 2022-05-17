@@ -20,6 +20,7 @@ body:
     id: affected
     attributes:
       label: Affected Component/Version
+      multiple: true
       options:
         - APIM/2.6.0
         - APIM/3.0.0
