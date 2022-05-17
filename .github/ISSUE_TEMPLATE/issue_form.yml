@@ -2,10 +2,13 @@ name: "❌ Report a Bug"
 description: Create an issue if something does not work as expected.
 labels: ["Priority/Normal", "Type/Bug"]
 body:
-  - type: markdown
+  - type: textarea
+    id: description
     attributes:
-      value: |
-        Thanks for taking the time to fill out this bug report!
+      label: Description
+      description: <!-- Describe the issue -->
+      placeholder: Tell us what you see!
+      value: "A bug happened!"
   - type: input
     id: contact
     attributes:
@@ -14,13 +17,7 @@ body:
       placeholder: ex. email@example.com
     validations:
       required: false
-  - type: textarea
-    id: what-happened
-    attributes:
-      label: What happened?
-      description: Also tell us, what did you expect to happen?
-      placeholder: Tell us what you see!
-      value: "A bug happened!"
+  
     validations:
       required: true
   - type: dropdown
