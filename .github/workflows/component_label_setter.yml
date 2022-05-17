@@ -7,14 +7,7 @@ jobs:
     permissions:
       issues: write
     if:
-      ${{(
-      contains(github.event.issue.labels.*.name, 'Affected/APIM-2.6.0') ||
-      contains(github.event.issue.labels.*.name, 'Affected/APIM-3.0.0') ||
-      contains(github.event.issue.labels.*.name, 'Affected/APIM-3.1.0') ||
-      contains(github.event.issue.labels.*.name, 'Affected/APIM-3.2.0') ||
-      contains(github.event.issue.labels.*.name, 'Affected/APIM-4.0.0') ||
-      contains(github.event.issue.labels.*.name, 'Affected/APIM-4.1.0')
-      )}}
+      ${{(contains(github.event.issue.labels.*.name, 'Affected/APIM'))}}
     steps:
       - run: echo Labels are not properly set
       - run: gh issue edit $ISSUE --add-label "Component/APIM"
