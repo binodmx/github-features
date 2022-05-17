@@ -6,8 +6,16 @@ body:
     id: description
     attributes:
       label: Description
-      description: Describe the issue
       placeholder: Tell us what you see!
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      placeholder: Tell us how you encountered the bug!
+    validations:
+      required: false
   - type: input
     id: contact
     attributes:
@@ -16,17 +24,14 @@ body:
       placeholder: ex. email@example.com
     validations:
       required: false
-  
-    validations:
-      required: true
   - type: dropdown
-    id: version
+    id: affected
     attributes:
-      label: Version
+      label: Affected Component/Version
       description: What version of our software are you running?
       options:
-        - 1.0.2 (Default)
-        - 1.0.3 (Edge)
+        - APIM/2.6.0
+        - APIM/4.0.0
     validations:
       required: true
   - type: dropdown
