@@ -40,7 +40,7 @@ body:
     attributes:
       label: Environment details (with versions)
       placeholder: Tell us how you encountered the bug!
-      value: "OS: <br />Client: <br>Env (Docker/K8s): "
+      value: "OS: /nClient: <br>Env (Docker/K8s): "
     validations:
       required: false
   - type: dropdown
