@@ -6,9 +6,8 @@ body:
     id: description
     attributes:
       label: Description
-      description: <!-- Describe the issue -->
+      description: Describe the issue
       placeholder: Tell us what you see!
-      value: "A bug happened!"
   - type: input
     id: contact
     attributes:
