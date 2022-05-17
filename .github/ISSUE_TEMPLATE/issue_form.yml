@@ -15,31 +15,24 @@ body:
       label: Steps to Reproduce
       placeholder: Tell us how you encountered the bug!
     validations:
-      required: false
-  - type: input
-    id: contact
-    attributes:
-      label: Contact Details
-      description: How can we get in touch with you if we need more info?
-      placeholder: ex. email@example.com
-    validations:
-      required: false
+      required: true
   - type: dropdown
     id: affected
     attributes:
       label: Affected Component/Version
-      description: What version of our software are you running?
       options:
         - APIM/2.6.0
+        - APIM/3.0.0
+        - APIM/3.1.0
         - APIM/3.2.0
         - APIM/4.0.0
+        - APIM/4.1.0
     validations:
       required: true
   - type: textarea
     id: environment
     attributes:
       label: Environment details (with versions)
-      placeholder: Tell us how you encountered the bug!
       value: "OS: \nClient: \nEnv (Docker/K8s): "
   - type: textarea
     id: logs
@@ -52,11 +45,3 @@ body:
     attributes:
       label: Related issues
       placeholder: Mention if any related issues!
-  - type: checkboxes
-    id: terms
-    attributes:
-      label: Code of Conduct
-      description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com)
-      options:
-        - label: I agree to follow this project's Code of Conduct
-          required: true
