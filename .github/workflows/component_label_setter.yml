@@ -7,7 +7,7 @@ jobs:
     permissions:
       issues: write
     if:
-      ${{contains(github.event.issue.labels.*.name, 'Type/Bug') && (
+      ${{(
       contains(github.event.issue.labels.*.name, 'Affected/APIM-2.6.0') ||
       contains(github.event.issue.labels.*.name, 'Affected/APIM-3.0.0') ||
       contains(github.event.issue.labels.*.name, 'Affected/APIM-3.1.0') ||
