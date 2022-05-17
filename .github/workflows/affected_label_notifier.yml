@@ -16,7 +16,7 @@ jobs:
       contains(github.event.issue.labels.*.name, 'Affected/APIM-4.1.0')
       )}}
     steps:
-      - run: echo Labels are not properly set
+      - run: echo Affected label is not set
       - run: gh issue comment $ISSUE --body "This issue is **NOT** opened with a proper **Affected/** label. Make sure to add proper affected component label when opening issues. Please add or leave a comment with the proper reason label now."
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
