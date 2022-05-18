@@ -2,7 +2,7 @@ on:
   issues:
     types: [labeled]
 jobs:
-  check-resolution-label:
+  set-component-label:
     runs-on: ubuntu-latest
     permissions:
       issues: write
