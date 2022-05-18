@@ -10,7 +10,7 @@ jobs:
       ${{contains(github.event.issue.body, 'APIM/4.0.0')}}
     steps:
       - run: echo Affected label is not set
-      - run: gh issue edit $ISSUE --add-label "Affected/APIM-4.0.0"
+      - run: gh issue edit $ISSUE --add-label "Affected/APIM-4.0.0,Component/APIM"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           ISSUE: ${{ github.event.issue.html_url }}
