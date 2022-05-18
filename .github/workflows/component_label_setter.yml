@@ -7,7 +7,7 @@ jobs:
     permissions:
       issues: write
     if:
-      ${{(contains(github.event.issue.labels.*.name, 'Affected/APIM'))}}
+      ${{(contains(github.event.issue.labels.*.name, 'Affected/APIM-4.0.0'))}}
     steps:
       - run: echo Labels are not properly set
       - run: gh issue edit $ISSUE --add-label "Component/APIM"
