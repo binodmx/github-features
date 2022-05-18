@@ -2,7 +2,7 @@
 #   issues:
 #     types: [opened]
 # jobs:
-#   check-resolution-label:
+#   check-affected-label:
 #     runs-on: ubuntu-latest
 #     permissions:
 #       issues: write
