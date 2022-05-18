@@ -7,10 +7,10 @@ jobs:
     permissions:
       issues: write
     if:
-      ${{contains(github.event.issue.body, 'Affected Component/Version')}}
+      ${{contains(github.event.issue.body, 'APIM/4.0.0')}}
     steps:
       - run: echo Affected label is not set
-      - run: gh issue comment $ISSUE --body "This issue has Affected/{Component}/{Version} label"
+      - run: gh issue edit $ISSUE --add-label "Affected/APIM-4.0.0"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           ISSUE: ${{ github.event.issue.html_url }}
