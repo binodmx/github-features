@@ -34,13 +34,16 @@ body:
     id: environment
     attributes:
       label: Environment Details (with versions)
+      description: Mention the environment details that the product is running on.
       value: "OS: \nClient: \nEnv (Docker/K8s): "
   - type: textarea
     id: logs
     attributes:
       label: Relevant Log Output
-      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
+      description: Copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
       render: shell
+    validations:
+      required: false
   - type: textarea
     id: related
     attributes:
