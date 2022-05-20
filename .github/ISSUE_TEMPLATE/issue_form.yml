@@ -20,16 +20,9 @@ body:
     id: affected
     attributes:
       label: Affected Component
-      description: Enter affected component and version in <component>/<version> format. For ex:- APIM/4.0.0.
+      description: Enter affected component and version in {component}/{version} format. For ex:- APIM/4.0.0.
     validations:
       required: true
-  - type: dropdown
-    id: version
-    attributes:
-      label: Version
-      options:
-        - 4.0.0
-        - 4.1.0
   - type: textarea
     id: environment
     attributes:
