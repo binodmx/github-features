@@ -42,6 +42,7 @@ body:
       label: Relevant Log Output
       description: Copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
       render: shell
+      value: N/A
     validations:
       required: false
   - type: textarea
@@ -49,5 +50,6 @@ body:
     attributes:
       label: Related Issues
       description: Mention if any related issues.
+      value: N/A
     validations:
       required: false
