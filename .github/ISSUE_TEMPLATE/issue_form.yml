@@ -7,7 +7,7 @@ body:
     attributes:
       label: Description
       description: Describe the issue.
-      value: ${github.event.repo}
+      value: ${github.event.repo.name}
     validations:
       required: true
   - type: textarea
