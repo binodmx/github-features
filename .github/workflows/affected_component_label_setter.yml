@@ -30,7 +30,7 @@ jobs:
         run: gh issue edit $ISSUE --add-label "Affected/APIM-2.5.0,Component/APIM"
       - name: Check None
         if: ${{!contains(github.event.issue.body, 'Affected Component\n\n')}}
-        run: gh issue edit $ISSUE --add-label "Component/APIM"
+        run: echo ${{github.event.issue.body}}
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       ISSUE: ${{ github.event.issue.html_url }}
