@@ -30,7 +30,7 @@ body:
         - MI Dashboard
         - SI
     validations:
-      required: false
+      required: true
   - type: dropdown
     id: version
     attributes:
