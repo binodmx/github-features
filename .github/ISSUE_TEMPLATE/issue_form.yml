@@ -30,13 +30,13 @@ body:
         - APIM/4.1.0
     validations:
       required: true
-    - type: dropdown
-      id: version
-      attributes:
-        label: Version
-        options:
-          - 4.0.0
-          - 4.1.0
+  - type: dropdown
+    id: version
+    attributes:
+      label: Version
+      options:
+        - 4.0.0
+        - 4.1.0
   - type: textarea
     id: environment
     attributes:
