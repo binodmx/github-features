@@ -6,6 +6,7 @@ body:
     id: description
     attributes:
       label: Description
+      description: Describe the issue
       placeholder: Description of the issue
     validations:
       required: true
@@ -46,6 +47,6 @@ body:
     id: related
     attributes:
       label: Related issues
-      placeholder: Mention if any related issues!
+      description: Mention if any related issues!
     validations:
       required: false
