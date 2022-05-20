@@ -25,12 +25,12 @@ body:
         - Analytics
         - APIM
         - CTL
-        - IntegrationStudio
+        - Integration Studio
         - MI
-        - MIDashboard
+        - MI Dashboard
         - SI
     validations:
-      required: true
+      required: false
   - type: dropdown
     id: version
     attributes:
