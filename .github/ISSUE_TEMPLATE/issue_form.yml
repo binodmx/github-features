@@ -16,19 +16,11 @@ body:
       description: List the steps you followed when you encountered the issue. If none, type N/A.
     validations:
       required: true
-  - type: dropdown
+  - type: input
     id: affected
     attributes:
       label: Affected Component
-      multiple: true
-      options:
-        - Analytics APIM
-        - APIM
-        - APICTL
-        - Integration Studio
-        - MI
-        - MI Dashboard
-        - SI
+      description: Enter affected component and version in <component>/<version> format. For ex:- APIM/4.0.0.
     validations:
       required: true
   - type: dropdown
