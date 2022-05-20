@@ -22,9 +22,10 @@ body:
       label: Affected Component
       multiple: true
       options:
-        - Analytics
+        - Analytics APIM
+        - Analytics EI
         - APIM
-        - CTL
+        - APICTL
         - Integration Studio
         - MI
         - MI Dashboard
