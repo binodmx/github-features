@@ -29,8 +29,9 @@ body:
     id: environment
     attributes:
       label: Environment Details (with versions)
-      description: Mention the environment details that the product is running on.
-      value: "OS: \nClient: \nEnv (Docker/K8s): "
+      description: Mention the environment details (OS, Client, Docker|K8s, etc.) that the product is running on.
+    validations:
+      required: false
   - type: textarea
     id: logs
     attributes:
