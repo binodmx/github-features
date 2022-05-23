@@ -20,9 +20,7 @@ body:
     id: affected
     attributes:
       label: Affected Component
-      description: |
-      Enter affected component and version in {component}-{version} format. For ex:- APIM-4.0.0.
-      List of components = [Analytics, APIM, APICTL, IntegrationStudio, MI, MIDashboard, SI]
+      description: Enter affected component and version in {component}-{version} format. For ex:- APIM-4.0.0. List of components = [Analytics, APIM, APICTL, IntegrationStudio, MI, MIDashboard, SI]
     validations:
       required: true
   - type: textarea
