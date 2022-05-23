@@ -1,3 +1,4 @@
 import os
 
-print(os.getenv("body"))
+os.environ["labels"] = "APIM-4.0.x"
+print(os.environ("body"))
