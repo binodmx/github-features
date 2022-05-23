@@ -1,3 +1,3 @@
 import os
 
-print(os.getenv("body")
+print(os.getenv("body"))
