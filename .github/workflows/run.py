@@ -1,4 +1,4 @@
 import os
 
-os.environ["LABELS"] = "APIM-4.0.x"
-print(os.environ["body"])
+print("label1,label2")
+# print(os.environ["body"])
