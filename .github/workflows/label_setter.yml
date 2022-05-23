@@ -13,11 +13,12 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: 3.8
-      - name: execute py script
+      - name: execute python script
         run: |
           labels=`python .github/workflows/run.py`
           echo $labels
+          gh issue edit $ISSUE --add-label $labels
         env:
-          body: ${{ github.event.issue.body }}
-    env:
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ISSUE: ${{ github.event.issue.html_url }}
+          ISSUE_BODY: ${{ github.event.issue.body }}
