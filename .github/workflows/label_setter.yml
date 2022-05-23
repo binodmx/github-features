@@ -15,8 +15,9 @@ jobs:
           python-version: 3.8
       - name: execute py script
         run: python .github/workflows/run.py
-        run: echo $LABELS
         env:
           body: ${{ github.event.issue.body }}
+      - name: print labels
+        run: echo $LABELS
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
