@@ -1,0 +1,21 @@
+on:
+  issues:
+    types: [opened]
+jobs:
+  set-affected-component-labels:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+    steps:
+      - name: checkout repo content
+        uses: actions/checkout@v2
+      - name: setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
+      - name: execute py script
+        run: python run.py
+        env:
+          body: ${{ github.event.issue.body }}
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
