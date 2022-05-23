@@ -14,7 +14,9 @@ jobs:
         with:
           python-version: 3.8
       - name: execute py script
-        run: python .github/workflows/run.py && echo $LABELS
+        run: |
+          labels = `python .github/workflows/run.py`
+          echo $labels
         env:
           body: ${{ github.event.issue.body }}
     env:
