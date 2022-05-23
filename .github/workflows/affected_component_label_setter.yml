@@ -7,6 +7,8 @@ jobs:
     permissions:
       issues: write
     steps:
+      - name: test
+        run: echo 'Affected Component\n  \n  APIM/4.1.0'
       - name: Check APIM/4.1.0
         if: ${{contains(github.event.issue.body, 'Affected Component\n  \n  APIM/4.1.0')}}
         run: gh issue edit $ISSUE --add-label "Affected/APIM-4.1.0,Component/APIM"
