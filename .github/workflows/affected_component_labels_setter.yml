@@ -2,33 +2,31 @@ on:
   issues:
     types: [opened]
 jobs:
-  set-affected-label:
+  set-affected-component-labels:
     runs-on: ubuntu-latest
     permissions:
       issues: write
     steps:
-      - name: test echo
-        run: echo ${{toJSON(github.event.issue.body)}}
       - name: Check APIM/4.1.0
-        if: ${{contains(toJSON(github.event.issue.body), 'Affected Component\n\nAPIM/4.1.0')}}
+        if: ${{contains(toJSON(github.event.issue.body), 'Affected Component\n\nAPIM-4.1.0')}}
         run: gh issue edit $ISSUE --add-label "Affected/APIM-4.1.0,Component/APIM"
       - name: Check APIM/4.0.0
-        if: ${{contains(github.event.issue.body, 'Affected Component\n\nAPIM/4.0.0')}}
+        if: ${{contains(toJSON(github.event.issue.body), 'Affected Component\n\nAPIM-4.0.0')}}
         run: gh issue edit $ISSUE --add-label "Affected/APIM-4.0.0,Component/APIM"
       - name: Check APIM/3.2.0
-        if: ${{contains(github.event.issue.body, 'Affected Component\n  \n  APIM/3.2.0')}}
+        if: ${{contains(toJSON(github.event.issue.body), 'Affected Component\n\nAPIM-3.2.0')}}
         run: gh issue edit $ISSUE --add-label "Affected/APIM-3.2.0,Component/APIM"
       - name: Check APIM/3.1.0
-        if: ${{contains(github.event.issue.body, 'Affected Component\n  \n  APIM/3.1.0')}}
+        if: ${{contains(toJSON(github.event.issue.body), 'Affected Component\n\nAPIM-3.1.0')}}
         run: gh issue edit $ISSUE --add-label "Affected/APIM-3.1.0,Component/APIM"
       - name: Check APIM/3.0.0
-        if: ${{contains(github.event.issue.body, 'Affected Component\n  \n  APIM/3.0.0')}}
+        if: ${{contains(toJSON(github.event.issue.body), 'Affected Component\n\nAPIM-3.0.0')}}
         run: gh issue edit $ISSUE --add-label "Affected/APIM-3.0.0,Component/APIM"
       - name: Check APIM/2.6.0
-        if: ${{contains(github.event.issue.body, 'Affected Component\n  \n  APIM/2.6.0')}}
+        if: ${{contains(toJSON(github.event.issue.body), 'Affected Component\n\nAPIM-2.6.0')}}
         run: gh issue edit $ISSUE --add-label "Affected/APIM-2.6.0,Component/APIM"
       - name: Check APIM/2.5.0
-        if: ${{contains(github.event.issue.body, 'Affected Component\n  \n  APIM/2.5.0')}}
+        if: ${{contains(toJSON(github.event.issue.body), 'Affected Component\n\nAPIM-2.5.0')}}
         run: gh issue edit $ISSUE --add-label "Affected/APIM-2.5.0,Component/APIM"
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
