@@ -8,7 +8,7 @@ jobs:
       issues: write
     steps:
       - name: Check APIM/4.1.0
-        if: ${{contains(github.event.issue.body, 'Affected Component\n\nAPIM/4.1.0')}}
+        if: ${{contains(github.event.issue.body, 'Affected Component\n\nAPIM4.1.0')}}
         run: gh issue edit $ISSUE --add-label "Affected/APIM-4.1.0,Component/APIM"
       - name: Check APIM/4.0.0
         if: ${{contains(github.event.issue.body, 'Affected Component\n\nAPIM/4.0.0')}}
