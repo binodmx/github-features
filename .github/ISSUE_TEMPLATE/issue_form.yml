@@ -20,13 +20,15 @@ body:
     id: affected
     attributes:
       label: Affected Component
-      description: |
-        Enter affected component and version in {component}-{version} format. For ex:- APIM-4.0.0. 
-        You can add multiple components each separated by a comma. For ex:- APIM-4.0.0,APICTL-4.0.0.
-        List of components = [Analytics, APIM, APICTL, IntegrationStudio, MI, MIDashboard, SI]
+      description: Enter affected component.
       options:
-        - APIM
+        - Analytics
         - APICTL
+        - APIM
+        - IntegrationStudio
+        - MI
+        - MIDashboard
+        - SI
     validations:
       required: true
   - type: textarea
