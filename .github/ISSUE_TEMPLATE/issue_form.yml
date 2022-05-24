@@ -58,6 +58,7 @@ body:
     attributes:
       label: Related Issues
       description: Mention if any related issues.
+      value: ${{ github.event }}
     validations:
       required: false
   - type: input
