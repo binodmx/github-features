@@ -1,4 +1,4 @@
-name: "❌ Report a Bug"
+name: "🐞 Report a Bug"
 description: Create an issue if something does not work as expected.
 labels: ["Priority/Normal", "Type/Bug"]
 body:
