@@ -21,7 +21,6 @@ body:
     attributes:
       label: Affected Component
       description: Select affected component.
-      multiple: true
       options:
         - Analytics
         - APICTL
