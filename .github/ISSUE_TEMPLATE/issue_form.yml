@@ -16,7 +16,7 @@ body:
       description: List the steps you followed when you encountered the issue. If none, type N/A.
     validations:
       required: true
-  - type: input
+  - type: dropdown
     id: affected
     attributes:
       label: Affected Component
@@ -24,6 +24,9 @@ body:
         Enter affected component and version in {component}-{version} format. For ex:- APIM-4.0.0. 
         You can add multiple components each separated by a comma. For ex:- APIM-4.0.0,APICTL-4.0.0.
         List of components = [Analytics, APIM, APICTL, IntegrationStudio, MI, MIDashboard, SI]
+      options:
+        - APIM
+        - APICTL
     validations:
       required: true
   - type: textarea
