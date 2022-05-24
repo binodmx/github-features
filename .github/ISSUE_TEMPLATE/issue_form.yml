@@ -17,10 +17,10 @@ body:
     validations:
       required: true
   - type: dropdown
-    id: affected
+    id: component
     attributes:
       label: Affected Component
-      description: Enter affected component.
+      description: Select affected component.
       options:
         - Analytics
         - APICTL
@@ -29,6 +29,13 @@ body:
         - MI
         - MIDashboard
         - SI
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: Enter component version.
     validations:
       required: true
   - type: textarea
