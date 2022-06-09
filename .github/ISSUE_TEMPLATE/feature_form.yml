@@ -43,7 +43,6 @@ body:
     attributes:
       label: Implementation
       description: Suggest an approach or a design for the feature.
-      render: shell
     validations:
       required: false
   - type: textarea
