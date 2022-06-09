@@ -3,9 +3,9 @@ description: Ask a question about the product suite.
 labels: ["Priority/Normal", "Type/Question"]
 body:
   - type: textarea
-    id: question
+    id: description
     attributes:
-      label: Question
+      label: Description
       description: Describe the question.
     validations:
       required: true
