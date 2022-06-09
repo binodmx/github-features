@@ -13,7 +13,7 @@ body:
     id: solution
     attributes:
       label: Solution
-      description: Describe the solution/feature you suggest.
+      description: Describe the feature you suggest.
     validations:
       required: true
   - type: dropdown
