@@ -23,14 +23,14 @@ body:
         - MIDashboard
         - SI
     validations:
-      required: false
+      required: true
   - type: input
     id: version
     attributes:
       label: Version
       description: Enter component version.
     validations:
-      required: false
+      required: true
   - type: textarea
     id: environment
     attributes:
