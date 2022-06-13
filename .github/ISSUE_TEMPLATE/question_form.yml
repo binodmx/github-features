@@ -1,4 +1,4 @@
-name: "🙋 Ask a question"
+name: "🙋 Ask a Question"
 description: Ask a question about the product suite.
 labels: ["Priority/Normal", "Type/Question"]
 body:
