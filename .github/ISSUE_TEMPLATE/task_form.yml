@@ -1,19 +1,12 @@
 name: "✍️ Task"
-description: Suggest new functionality and features for the product suite.
+description: Create a new task.
 labels: ["Priority/Normal", "Type/Task"]
 body:
   - type: textarea
-    id: problem
+    id: description
     attributes:
-      label: Problem
-      description: Describe why you think the product suite needs this feature.
-    validations:
-      required: true
-  - type: textarea
-    id: solution
-    attributes:
-      label: Solution
-      description: Describe the feature you suggest.
+      label: Description
+      description: A clear description of what needs to be done.
     validations:
       required: true
   - type: dropdown
@@ -30,7 +23,7 @@ body:
         - MIDashboard
         - SI
     validations:
-      required: true
+      required: false
   - type: input
     id: version
     attributes:
